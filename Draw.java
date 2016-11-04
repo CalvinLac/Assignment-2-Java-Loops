@@ -6,23 +6,39 @@
 * Tutorial Section: T04
 * Assignment: 1
 *
-*The program prompts the user to enter a binary number.
-*The program then changes the binary number to a decimal. 
+*This program takes given arguement and draws one of the three shapes 
 *********************************************************/
+
+/** 
+*  Draw.java
+*  @version CPSC 233
+*  @author Calvin Lac
+*/
 
 public class Draw {
 
+  /**
+  *This method will return your student ID
+  *@return Will return student id
+  */
   public static String getID() {
   return "10133628"; // Your student ID here.
   }
 
-  //initializing the private data members that store the amount of shapes drawn
+  /**
+  *Initializing the private data members that store the amount of shapes drawn
+  */
   private int rectanglesDrawn = 0;
   private int leftTrianglesDrawn = 0;
   private int rightTrianglesDrawn = 0;
 
-  //Method that outputs the rectangles
-  void drawRectangle (char symbol, int width, int height) {
+  /**
+  *This method will take the a symbol, width, and height to make a rectangle
+  *@param symbol is the output of the shape
+  *@param width is the width of the rectangle you want to draw
+  *@param height is the height of the rectangle you want to draw
+  */
+  public void drawRectangle (char symbol, int width, int height) {
     //This for loop literates through the height of the rectangle to get the height correct
     for (int i = 0; i < height; i++) {
       //This for loop will create the correct number of symbols for the width of the rectangle
@@ -35,8 +51,12 @@ public class Draw {
     rectanglesDrawn++;
   }
 
-  //Method that outputs the left triangles
-  void drawLeftTriangle (char symbol, int height) {
+  /**
+  *This method will take the a symbol and height to make a left triangle
+  *@param symbol is the output of the shape
+  *@param height is the height of the rectangle you want to draw
+  */
+  public void drawLeftTriangle (char symbol, int height) {
     //Initializing the counter method that will be used in a for loop
     int counter = height;
     //This for loop will iterate to get the height of the triangle correct
@@ -52,8 +72,12 @@ public class Draw {
     leftTrianglesDrawn++;
   }
 
-  //Method that outputs the right triangles
-  void drawRightTriangle (char symbol, int height) {
+  /**
+  *This method will take the a symbol and height to make a right triangle
+  *@param symbol is the output of the shape
+  *@param height is the height of the rectangle you want to draw
+  */
+  public void drawRightTriangle (char symbol, int height) {
     //initializing the data members that will be used in the for loops
     int counter = height - 1;
     int counter2 = 1;
@@ -75,7 +99,9 @@ public class Draw {
     rightTrianglesDrawn++;
   }
 
-  //Method that will display the amount of different shapes that drawn
+  /**
+  *This method will display the counts of the different shapes that you have drawn
+  */
   public void displayCounts () {
     System.out.println("Number of shapes drawn:");
     System.out.println("Rectangles: " + rectanglesDrawn);
